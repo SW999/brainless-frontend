@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkbrainless_frontend_client=self.webpackChunkbrainless_frontend_client||[]).push([[303],{4303:function(e){e.exports="<p>test 1</p><p>test 2</p>"}}]);

@@ -1,21 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import ReactQuill from 'react-quill';
-import 'react-quill/dist/quill.snow.css';
 import { uploadData } from "../../utils/upload-data";
+import { EDITOR_FORMATS, EDITOR_MODULES } from "../../constants/editor";
+import 'react-quill/dist/quill.snow.css';
 
 export function Editor({data = '', name}) {
   const [value, setValue] = useState('');
 
-  const doSave = async (range, source, editor) => {
-    console.log('editor: ', typeof editor.getHTML());
-    await uploadData(editor.getHTML(), name);
-  }
+  const doSave = async (range, source, editor) => await uploadData(editor.getHTML(), name);
 
   useEffect(() => {
     setValue(() => data);
   }, [data]);
 
   return (
-    <ReactQuill theme="snow" value={value} onChange={setValue} onBlur={doSave}/>
+    <ReactQuill
+      formats={EDITOR_FORMATS}
+      modules={EDITOR_MODULES}
+      onBlur={doSave}
+      onChange={setValue}
+      theme="snow"
+      value={value}
+    />
   );
 }

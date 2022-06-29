@@ -1,7 +1,7 @@
 import {createElement} from 'react';
 import { WrapperTags } from "../../constants/wrapper-tags";
 
-export const MapWrapperComponent = ({className, content, tag}) => {
+export const MapWrapperComponent = ({ children = null, className, content = undefined, tag }) => {
   let _tag = tag;
 
   if(!Object.values(WrapperTags).includes(tag)) {
@@ -10,6 +10,8 @@ export const MapWrapperComponent = ({className, content, tag}) => {
 
   return createElement(
     _tag,
-    { className, dangerouslySetInnerHTML: {__html: content} }
+    {
+      className, ...(Boolean(content) ? {dangerouslySetInnerHTML: {__html: content}} : {children})
+    }
   );
 }

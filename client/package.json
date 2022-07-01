@@ -13,9 +13,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "rimraf build/* && react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
-    "postbuild": "react-snap && rimraf build/200.html build/**/*.map build/static/js"
+    "postbuild": "react-snap && rimraf build/200.html build/**/*.map build/**/main.*.js build/**/*.chunk.js build/**/*.js.LICENSE.txt"
+  },
+  "reactSnap": {
+    "removeScriptTags": true
   },
   "eslintConfig": {
     "extends": [
@@ -36,7 +39,7 @@
     ]
   },
   "devDependencies": {
-    "react-snap": "^1.23.0",
+    "react-snap": "https://github.com/SW999/react-snap.git",
     "rimraf": "^3.0.2"
   }
 }

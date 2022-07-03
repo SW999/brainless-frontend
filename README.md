@@ -1,5 +1,5 @@
-# ![Brainless Frontend](https://user-images.githubusercontent.com/3176886/176266652-3f3617a9-fbe7-4839-b3b1-b919d831f2d0.png)
-A lazy way to add content to static pages.
+# ![Brainless Frontend](https://user-images.githubusercontent.com/3176886/177050807-687a6a90-f2a3-4a40-b09f-b10836a55d5a.png)
+A lazy way to create editable static html-pages.
 
 ## Motivation
 _**TL;DR:** This repository is designed to help you easily add large amounts of text to static pages._

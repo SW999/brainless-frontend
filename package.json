@@ -12,7 +12,7 @@
   },
   "keywords": [],
   "author": "Serj Vaitehovich",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "babel-core": "^6.26.3",
     "express": "^4.18.1",

@@ -1,11 +1,11 @@
 import {createElement} from 'react';
-import { WrapperTags } from "../../constants/wrapper-tags";
+import { WRAPPER_TAGS } from '../../constants';
 
 export const MapWrapperComponent = ({ children = null, className, content = undefined, tag }) => {
   let _tag = tag;
 
-  if(!Object.values(WrapperTags).includes(tag)) {
-    _tag = WrapperTags.DIV;
+  if(!Object.values(WRAPPER_TAGS).includes(tag)) {
+    _tag = WRAPPER_TAGS.DIV;
   }
 
   return createElement(

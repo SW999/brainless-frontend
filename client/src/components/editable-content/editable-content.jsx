@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 import { getCleanText } from '../../utils/get-clean-text';
-import { Editor } from "../editor";
-import { MapWrapperComponent } from "../map-wrapper-component";
-import { WrapperTags } from "../../constants/wrapper-tags";
+import { Editor } from '../editor';
+import { MapWrapperComponent } from '../map-wrapper-component';
+import { WRAPPER_TAGS } from '../../constants';
 
-export const EditableContent = ({id, wrapperClass, wrapperTag = WrapperTags.DIV}) => {
+export const EditableContent = ({id, wrapperClass, wrapperTag = WRAPPER_TAGS.DIV}) => {
   const [content, setContent] = useState('');
 
   useEffect(() => {

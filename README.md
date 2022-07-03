@@ -33,7 +33,7 @@ npm i
 <EditableContent id='an-unique-identifier' />
 ```
 
-This component has a unique required prop '**id**' and two optional props: **wrapperTag** (please find supported tags in the **WrapperTags** constant) and **wrapperClass**.
+This component has a unique required prop '**id**' and two optional props: **wrapperTag** (please find supported tags in the **WRAPPER_TAGS** constant) and **wrapperClass**.
 
 This is the end of the development process :wink:
 

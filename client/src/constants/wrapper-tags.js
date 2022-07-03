@@ -1,4 +1,4 @@
-export const WrapperTags = {
+export const WRAPPER_TAGS = {
   DIV: 'div',
   SECTION: 'section',
   SPAN: 'span',

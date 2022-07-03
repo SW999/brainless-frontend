@@ -1,6 +1,6 @@
 import { EditableContent } from "./components/editable-content";
 import './App.css';
-import { WrapperTags } from "./constants/wrapper-tags";
+import { WRAPPER_TAGS } from './constants';
 
 function App() {
   return (
@@ -10,8 +10,8 @@ function App() {
       </header>
       <main>
         <details>
-          <EditableContent id='first-summary' wrapperTag={WrapperTags.SUMMARY} />
-          <EditableContent id='first-section' wrapperTag={WrapperTags.SECTION} />
+          <EditableContent id='first-summary' wrapperTag={WRAPPER_TAGS.SUMMARY} />
+          <EditableContent id='first-section' wrapperTag={WRAPPER_TAGS.SECTION} />
         </details>
         <details>
           <summary><h3>Регистрация</h3></summary>

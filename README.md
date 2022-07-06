@@ -49,11 +49,11 @@ npm start
 npm run build
 ```
 - Configure [deployment process](client/README.md) if needed.
-I use Github Pages as a hosting for this project. To deploy I have pushed build to branch **gh-pages** via
+I use Github Pages as hosting for this project. To deploy I have pushed build to branch **gh-pages** via
 ```sh
 git subtree push --prefix client/build origin gh-pages
 ```
-and created additional script to _**package.json**_ file:
+and created an additional script to _**package.json**_ file:
 ```sh
 "postbuild": "git push origin :gh-pages && git subtree push --prefix client/build origin gh-pages"
 ```

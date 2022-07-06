@@ -1,1 +1,2 @@
-export {Editor} from './editor.jsx';
+import { Editor } from './editor.jsx';
+export default Editor;

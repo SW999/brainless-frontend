@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import ReactQuill from 'react-quill';
 import { uploadData } from '../../utils/upload-data';
 import { EDITOR_FORMATS, EDITOR_MODULES } from '../../constants';

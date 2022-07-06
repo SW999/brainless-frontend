@@ -1,8 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, lazy, Suspense } from 'react';
 import { getCleanText } from '../../utils/get-clean-text';
-import { Editor } from '../editor';
 import { MapWrapperComponent } from '../map-wrapper-component';
 import { WRAPPER_TAGS } from '../../constants';
+
+const Editor = lazy(() => import('../editor'));
 
 export const EditableContent = ({id, wrapperClass, wrapperTag = WRAPPER_TAGS.DIV}) => {
   const [content, setContent] = useState('');
@@ -16,7 +17,9 @@ export const EditableContent = ({id, wrapperClass, wrapperTag = WRAPPER_TAGS.DIV
   if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
     return (
       <MapWrapperComponent className={wrapperClass} tag={wrapperTag}>
-        <Editor data={getCleanText(content)} name={id}/>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Editor data={getCleanText(content)} name={id}/>
+        </Suspense>
       </MapWrapperComponent>
     );
   } else {

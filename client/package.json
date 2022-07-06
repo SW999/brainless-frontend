@@ -11,7 +11,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "postbuild": "react-snap && rimraf build/200.html build/asset-manifest.json build/**/*.map build/**/main.*.js build/**/*.chunk.js build/**/*.js.LICENSE.txt"
+    "postbuild": "react-snap && rimraf build/200.html build/asset-manifest.json build/**/*.map build/**/main.*.js build/**/*.chunk.* build/**/*.js.LICENSE.txt"
   },
   "reactSnap": {
     "removeScriptTags": true

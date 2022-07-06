@@ -20,6 +20,7 @@ With this repository, you can create _simple editable html-pages_ with less head
 </details>
 
 ## How to use
+![process](https://user-images.githubusercontent.com/3176886/177589292-2a85b656-252b-43d0-83f2-6e3e5a053e0c.jpg)
 - Clone repo
 - Install dependencies
 ```sh
@@ -57,7 +58,6 @@ and created an additional script to _**package.json**_ file:
 ```sh
 "postbuild": "git push origin :gh-pages && git subtree push --prefix client/build origin gh-pages"
 ```
-- Be happy!
 
 ## How it works
 Coming soon

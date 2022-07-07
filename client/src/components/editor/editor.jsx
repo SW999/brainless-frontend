@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import ReactQuill from 'react-quill';
 import { uploadData } from '../../utils/upload-data';
 import { EDITOR_FORMATS, EDITOR_MODULES } from '../../constants';
-import 'react-quill/dist/quill.snow.css';
+import './editor.css';
 
 export function Editor({data = '', name}) {
   const [value, setValue] = useState('');

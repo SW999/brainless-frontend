@@ -1,5 +1,5 @@
 import { useEffect, useState, lazy, Suspense } from 'react';
-import { getCleanText } from '../../utils/get-clean-text';
+import { getCleanText } from '../../utils';
 import { MapWrapperComponent } from '../map-wrapper-component';
 import { WRAPPER_TAGS } from '../../constants';
 

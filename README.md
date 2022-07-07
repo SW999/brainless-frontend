@@ -58,6 +58,11 @@ and created an additional script to _**package.json**_ file:
 ```sh
 "postbuild": "git push origin :gh-pages && git subtree push --prefix client/build origin gh-pages"
 ```
+If you have to include an additional javascript file please do it at the end of '**client/public/index.html**' file with the _required_ CSS class '**userscript**' or update existed file:
+```js
+<script src="%PUBLIC_URL%/static/js/userscript.js" class="userscript"></script>
+```
+That's it!
 
 ## How it works
 Coming soon

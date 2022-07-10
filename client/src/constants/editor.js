@@ -3,7 +3,7 @@ export const EDITOR_MODULES = {
     [{ 'header': [1, 2, 3, 4, false] }],
     [{ size: [] }],
     [{ align: '' }, { align: 'center' }, { align: 'right' }, { align: 'justify' }],
-    ['bold', 'italic', 'underline', 'strike', 'blockquote'],
+    ['bold', 'italic', 'underline', 'strike', 'code-block'],
     [{ 'color': [] }, { 'background': [] }],
     [
       { 'list': 'ordered' },
@@ -19,13 +19,13 @@ export const EDITOR_MODULES = {
   },
   htmlEditButton: {
     msg: 'Edit the content in HTML format',
-    buttonHTML: "&lt;/&gt;",
+    buttonHTML: "&lt;HTML&gt;",
   },
 };
 
 export const EDITOR_FORMATS = [
   'header', 'size', 'color', 'background',
-  'bold', 'italic', 'underline', 'strike', 'blockquote', 'code-block',
+  'bold', 'italic', 'underline', 'strike', 'code-block',
   'list', 'bullet', 'indent',
   'link', 'image', 'video',
   'align',

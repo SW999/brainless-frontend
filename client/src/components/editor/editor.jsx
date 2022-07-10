@@ -1,26 +1,31 @@
-import { useEffect, useState } from 'react';
-import ReactQuill from 'react-quill';
-import { uploadData } from '../../utils';
+import { useState, useCallback, useEffect } from 'react';
+import ReactQuill, { Quill } from 'react-quill';
+import htmlEditButton from 'quill-html-edit-button';
+import { uploadData, debounce } from '../../utils';
 import { EDITOR_FORMATS, EDITOR_MODULES } from '../../constants';
 import './editor.css';
+
+Quill.register({ 'modules/htmlEditButton': htmlEditButton });
 
 export function Editor({data = '', name}) {
   const [value, setValue] = useState('');
 
-  const doSave = async (range, source, editor) => await uploadData(editor.getHTML(), name);
+  const debouncedSave = useCallback(debounce(async value => await uploadData(value, name), 300), [name]);
 
-  useEffect(() => {
-    setValue(() => data);
-  }, [data]);
+  const handleChange = value => {
+    setValue(value);
+    debouncedSave(value);
+  };
+
+  useEffect(() => setValue(data), []);
 
   return (
-    <ReactQuill
-      formats={EDITOR_FORMATS}
-      modules={EDITOR_MODULES}
-      onBlur={doSave}
-      onChange={setValue}
-      theme="snow"
-      value={value}
-    />
+      <ReactQuill
+        formats={EDITOR_FORMATS}
+        modules={EDITOR_MODULES}
+        onChange={handleChange}
+        theme="snow"
+        value={value}
+      />
   );
 }

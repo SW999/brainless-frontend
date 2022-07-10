@@ -9,7 +9,7 @@
     "server": "node server.js",
     "client": "node start-client.js",
     "build": "npm --prefix ./client run build",
-    "postbuild": "git push origin :gh-pages && git subtree push --prefix client/build origin gh-pages"
+    "postbuild": "git subtree split --prefix client/build -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages"
   },
   "keywords": [],
   "author": "Serj Vaitehovich",

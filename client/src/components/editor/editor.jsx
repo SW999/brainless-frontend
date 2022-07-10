@@ -17,7 +17,11 @@ export function Editor({data = '', name}) {
     debouncedSave(value);
   };
 
-  useEffect(() => setValue(data), []);
+  useEffect(() => {
+    if (data !== '' && value === '') {
+      setValue(data);
+    }
+  }, [data, value]);
 
   return (
       <ReactQuill

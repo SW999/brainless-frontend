@@ -5,18 +5,38 @@ import { WRAPPER_TAGS } from './constants';
 function App() {
   return (
     <>
-      <EditableContent id='header' wrapperTag={WRAPPER_TAGS.HEADER} wrapperClass='header-logo' />
+      <header>
+        <h1 className="header-logo">САБАЧКУ-Вильня F.A.Q.</h1>
+      </header>
       <main>
-        <EditableContent id='first-section' wrapperTag={WRAPPER_TAGS.SECTION} />
-        <EditableContent id='second-section' wrapperTag={WRAPPER_TAGS.SECTION} />
+        <details>
+          <EditableContent id='first-summary' wrapperTag={WRAPPER_TAGS.SUMMARY}  />
+          <EditableContent id='first-section' wrapperTag={WRAPPER_TAGS.SECTION} />
+        </details>
+        <details>
+          <EditableContent id='reg-summary' wrapperTag={WRAPPER_TAGS.SUMMARY} />
+          <EditableContent id='reg-section' wrapperTag={WRAPPER_TAGS.SECTION} />
+        </details>
+        <details>
+          <EditableContent id='vet-summary' wrapperTag={WRAPPER_TAGS.SUMMARY} />
+          <EditableContent id='vet-section' wrapperTag={WRAPPER_TAGS.SECTION} />
+        </details>
+        <details>
+          <EditableContent id='per-summary' wrapperTag={WRAPPER_TAGS.SUMMARY} />
+          <EditableContent id='per-section' wrapperTag={WRAPPER_TAGS.SECTION} />
+        </details>
+        <details>
+          <EditableContent id='vigul-summary' wrapperTag={WRAPPER_TAGS.SUMMARY} />
+          <EditableContent id='vigul-section' wrapperTag={WRAPPER_TAGS.SECTION} />
+        </details>
+        <details>
+          <EditableContent id='beauty-summary' wrapperTag={WRAPPER_TAGS.SUMMARY} />
+          <EditableContent id='beauty-section' wrapperTag={WRAPPER_TAGS.SECTION} />
+        </details>
+        <br/>
       </main>
       <div className="footer" role="contentinfo">
-        <a className="git" href="https://github.com/SW999/brainless-frontend" rel="nofollow" title="Github page">
-          <img src="./static/img/github.svg" width="24" height="24" alt="Github logo" />
-        </a>Serj Vaitehovich<span className="divider"/>v. 1.0.0<span className="divider"/><a
-        href="mailto:sergey7w@gmail.com?subject=Brainless-frontend" target="_blank" rel="noopener noreferrer"
-        title="Email me"><span
-        role="img" aria-label="email me">📧</span></a>
+        <p>Здесь могла быть ваша реклама 🐶</p>
       </div>
       </>
   );

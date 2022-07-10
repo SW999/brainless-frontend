@@ -10,7 +10,7 @@ export const EditableContent = ({id, wrapperClass, wrapperTag = WRAPPER_TAGS.DIV
 
   useEffect(() => {
     if (typeof id === 'string' && id !== '') {
-      import(`../../data/${id}.json`).then(data => setContent(() => data?.default)).catch(() => false);
+      import(`../../data/${id}.json`).then(data => setContent(data?.default)).catch(() => setContent(''));
     }
   }, [id]);
 

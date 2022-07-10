@@ -8,7 +8,7 @@ function App() {
       <EditableContent id='header' wrapperTag={WRAPPER_TAGS.HEADER} wrapperClass='header-logo' />
       <main>
         <EditableContent id='first-section' wrapperTag={WRAPPER_TAGS.SECTION} />
-        <br/>
+        <EditableContent id='second-section' wrapperTag={WRAPPER_TAGS.SECTION} />
       </main>
       <div className="footer" role="contentinfo">
         <a className="git" href="https://github.com/SW999/brainless-frontend" rel="nofollow" title="Github page">

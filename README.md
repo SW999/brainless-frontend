@@ -64,5 +64,7 @@ If you have to include an additional javascript file please do it at the end of 
 ```
 That's it!
 
-## How it works
-Coming soon
+## Disclaimer
+This application does not use Typescript, tests or linters. These things save a lot of time on large projects, but this is clearly too much for a static site for a couple of pages.
+
+If for some reason, you need them, then you can easily set up them yourself. But in this case, I would recommend you consider frameworks such as **Gatsby** or **NextJs**.

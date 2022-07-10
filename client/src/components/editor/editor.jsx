@@ -10,6 +10,7 @@ Quill.register({ 'modules/htmlEditButton': htmlEditButton });
 export function Editor({data = '', name}) {
   const [value, setValue] = useState('');
 
+  // eslint-disable-next-line
   const debouncedSave = useCallback(debounce(async value => await uploadData(value, name), 300), [name]);
 
   const handleChange = value => {

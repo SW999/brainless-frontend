@@ -1,7 +1,7 @@
 # ![Brainless Frontend](https://user-images.githubusercontent.com/3176886/177050807-687a6a90-f2a3-4a40-b09f-b10836a55d5a.png)
 A lazy way to create *editable static html-pages*.
 
-<p align="center">
+<p>
 <img alt="Github License" src="https://img.shields.io/github/license/SW999/brainless-frontend" />
 <img alt="size" src="https://img.shields.io/github/repo-size/SW999/brainless-frontend" />
 <img alt="GitHub Package.json Version" src="https://img.shields.io/github/package-json/v/SW999/brainless-frontend" />

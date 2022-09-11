@@ -1,19 +1,31 @@
 export const EDITOR_MODULES = {
-  toolbar: [
-    [{ 'header': [1, 2, 3, 4, false] }],
-    [{ size: [] }],
-    [{ align: '' }, { align: 'center' }, { align: 'right' }, { align: 'justify' }],
-    ['bold', 'italic', 'underline', 'strike', 'code-block'],
-    [{ 'color': [] }, { 'background': [] }],
-    [
-      { 'list': 'ordered' },
-      { 'list': 'bullet' },
-      { 'indent': '-1' },
-      { 'indent': '+1' },
-    ],
-    ['link', 'image', 'video'],
-    ['clean'],
-  ],
+  toolbar: {
+    container: [
+      [{'header': [1, 2, 3, 4, false]}],
+      [{size: []}],
+      [{align: ''},
+        {
+          align: 'center'
+        },
+        {
+          align: 'right'
+        },
+        {
+          align: 'justify'
+        }
+      ],
+      ['bold', 'italic', 'underline', 'strike', 'code-block'],
+      [{'color': []}, {'background': []}],
+      [
+        {'list': 'ordered'},
+        {'list': 'bullet'},
+        {'indent': '-1'},
+        {'indent': '+1'},
+      ],
+      ['link', 'image', 'video'],
+      ['clean'],
+    ]
+  },
   clipboard: {    // toggle to add extra line breaks when pasting HTML:
     matchVisual: false,
   },
